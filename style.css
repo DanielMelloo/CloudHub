@@ -205,16 +205,6 @@ p {
 
 
 
-    
-section:nth-child(2n-1){
-    /* background-color: red; */
-}
-
-section:nth-child(2n){
-    /* background-color: blue; */
-}
-
-
 .columnToRow {
     display: flex;
     justify-content: space-evenly;
@@ -708,6 +698,8 @@ section:nth-child(2n){
 .footer ul {
     list-style: none;
     padding-left: 0;
+    color: var(--color2);
+
 }
 
 .footer li {
@@ -729,7 +721,8 @@ section:nth-child(2n){
 }
 
 .navUl a {
-    color: var(--footerColorNav);
+    color: var(--color2);
+
 }
 
 @media screen and (min-width: 40.375em) {
