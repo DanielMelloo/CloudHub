@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://danielmelloo.github.io/CloudHub/sitemap.xml
