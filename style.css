@@ -18,7 +18,8 @@
 
 @font-face {
     font-family: 'jet';
-    src: url('./fonts/ttf/JetBrainsMonoNL-Light.ttf') format('truetype');
+    src: url('./fonts/ttf/JetBrainsMonoNL-Light.ttf') format('truetype'), 
+         url('./fonts/webfonts/JetBrainsMono-Light.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
