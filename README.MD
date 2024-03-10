@@ -7,8 +7,7 @@
 ![GitHub open issues](https://img.shields.io/github/issues/DanielMelloo/CloudHub?style=for-the-badge)
 ![GitHub open pull requests](https://img.shields.io/github/issues-pr/DanielMelloo/CloudHub?style=for-the-badge)
 
-<img src="./media/landingImage.webp" alt="Imagem Destaque do Cloud_Hub, mostrando um servidor" width="300" height="auto">
-
+<img src="./media/other/landingImage.webp" alt="Imagem Destaque do Cloud_Hub, mostrando um servidor" width="300" height="auto">
 
 > [Página do Projeto Cloud_Hub](https://danielmelloo.github.io/CloudHub/).
 
