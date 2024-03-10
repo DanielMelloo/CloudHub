@@ -21,7 +21,7 @@ jobs:
 
       - name: Commit and push if changed
         env:
-          GITHUB_TOKEN: ${{ secrets.PRSECRET }}
+          GITHUB_TOKEN: ${{ secrets.PUSHSECRET }}
         run: |
           git config --global user.email "danielmello.nfa@gmail.com"
           git config --global user.name "DanielMelloo"
