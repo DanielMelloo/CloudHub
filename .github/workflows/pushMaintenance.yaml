@@ -21,13 +21,13 @@ jobs:
 
       - name: Commit and push if changed
         env:
-          GITHUB_TOKEN: ${{ secrets.PRSECRET }} # Define o token como variável de ambiente
+          GITHUB_TOKEN: ${{ secrets.PRSECRET }}
         run: |
           git config --global user.email "danielmello.nfa@gmail.com"
           git config --global user.name "DanielMelloo"
           git add sitemap.xml
           git commit -m "Update sitemap.xml" || exit 0
-          git push https://$GITHUB_TOKEN@github.com/DanielMelloo/CloudHub.git main
+          git push https://oauth2:${GITHUB_TOKEN}@github.com/DanielMelloo/CloudHub.git main
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
