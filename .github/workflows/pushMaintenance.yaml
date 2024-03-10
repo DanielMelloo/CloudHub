@@ -1,31 +1,34 @@
-name: CloudHub Website Maintenance
+name: Update Sitemap and Deploy
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  maintenance-tasks:
+  update-and-deploy:
     runs-on: ubuntu-latest
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+    steps:
+      - uses: actions/checkout@v3
 
-    - name: Update Sitemap
-      run: python attsitemap.py
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-    - name: Commit and push if changed
-      run: |
-        git config --global user.email "danielmello.nfa@gmail.com"
-        git config --global user.name "DanielMelloo"
-        git add sitemap.xml
-        git commit -m "Update sitemap.xml" || exit 0
-        git push
+      - name: Update Sitemap
+        run: python attsitemap.py
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email "danielmello.nfa@gmail.com"
+          git config --global user.name "DanielMelloo"
+          git add sitemap.xml
+          git commit -m "Update sitemap.xml" || exit 0
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
