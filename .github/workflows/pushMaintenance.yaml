@@ -26,9 +26,3 @@ jobs:
           git add sitemap.xml
           git commit -m "Update sitemap.xml" || exit 0
           git push
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.PRSECRET }}
-          publish_dir: ./
