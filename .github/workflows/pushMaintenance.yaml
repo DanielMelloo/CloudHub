@@ -2,7 +2,7 @@ name: Update Sitemap and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   update-and-deploy:
@@ -25,4 +25,11 @@ jobs:
           git config --global user.name "DanielMelloo"
           git add sitemap.xml
           git commit -m "Update sitemap.xml" || exit 0
-          git push
+          git remote add origin_with_token https://$PRSECRET@github.com/username/repository.git
+          git push origin_with_token main
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PRSECRET }}
+          publish_dir: ./
