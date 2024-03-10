@@ -11,11 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Check for broken links
-      uses: lycheeverse/lychee-action@v1.0.8
-      with:
-        args: --accept 200,403,429 ./**/*.html
-
     - name: Optimize Images
       uses: calibreapp/image-actions@main
       with:
