@@ -25,7 +25,7 @@ jobs:
           git config --global user.name "DanielMelloo"
           git add sitemap.xml
           git commit -m "Update sitemap.xml" || exit 0
-          git remote add origin_with_token https://$PRSECRET@github.com/username/repository.git
+          git remote add origin_with_token https://$PRSECRET@github.com/DanielMelloo//CloudHub.git
           git push origin_with_token main
 
       - name: Deploy to GitHub Pages
