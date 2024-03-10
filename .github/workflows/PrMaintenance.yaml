@@ -12,4 +12,4 @@ jobs:
       - name: Optimize Images
         uses: calibreapp/image-actions@main
         with:
-          githubToken: ${{ secrets.Infinity }}
+          githubToken: ${{ secrets.PRSECRET }}
